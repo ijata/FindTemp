@@ -67,11 +67,20 @@ public class TemperatureAnalizer
     }
     public static void Main(string[] args)
     {
-        int[] temperatures = { 12, 32, 21, 43, 10, 8, 26, 0 };
+        int[] temperatures = new int [10];
+
+        Console.WriteLine("Witaj w szukaczu temperatur");
+        Console.WriteLine("Podaj, kolejno 10 temperatur, a aplikacja poda najwyższą i najniższą \n");
+
+        for (int i = 0; i < 10; i++)
+        {
+            Console.Write(i + ": ");
+            temperatures[i] = int.Parse(Console.ReadLine());
+        }
 
 
-        Console.WriteLine(FindHighestTemperature(temperatures));
-        Console.WriteLine(FindLowestTemperature(temperatures));
+        Console.WriteLine(" \nNajwyższa temperatura to:" + FindHighestTemperature(temperatures));
+        Console.WriteLine("Najniższa temperatura to:" + FindLowestTemperature(temperatures));
     }
 
 }
